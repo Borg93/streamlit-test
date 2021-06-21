@@ -1,0 +1,5 @@
+pandas==1.2.4
+streamlit==0.82.0
+keybert==0.3.0
+keybert[flair]
+nltk==3.6.2
