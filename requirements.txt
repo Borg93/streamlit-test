@@ -1,4 +1,4 @@
-pandas
-streamlit
-keybert
+streamlit==0.82.0
+pandas==1.2.4
+keybert==0.3.0
 keybert[flair]
