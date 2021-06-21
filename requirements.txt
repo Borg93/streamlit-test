@@ -1,5 +1,4 @@
 pandas==1.2.4
-sentence_transformers==1.2.0
 torch==1.4.0
 flair==0.7
 streamlit==0.82.0
