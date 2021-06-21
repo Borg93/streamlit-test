@@ -28,7 +28,8 @@ keywords = kw_model.extract_keywords(doc)
 You can set keyphrase_ngram_range to set the length of the resulting keywords/keyphrases:
 
 
-```kw_model.extract_keywords(doc, keyphrase_ngram_range=(1, 1), stop_words=None)
+```
+kw_model.extract_keywords(doc, keyphrase_ngram_range=(1, 1), stop_words=None)
 [('learning', 0.4604),
  ('algorithm', 0.4556),
  ('training', 0.4487),
@@ -38,7 +39,8 @@ You can set keyphrase_ngram_range to set the length of the resulting keywords/ke
 To extract keyphrases, simply set keyphrase_ngram_range to (1, 2) or higher depending on the number of words you would like in the resulting keyphrases:
 
 
-```kw_model.extract_keywords(doc, keyphrase_ngram_range=(1, 2), stop_words=None)
+```
+kw_model.extract_keywords(doc, keyphrase_ngram_range=(1, 2), stop_words=None)
 [('learning algorithm', 0.6978),
  ('machine learning', 0.6305),
  ('supervised learning', 0.5985),
@@ -54,7 +56,8 @@ NOTE: For a full overview of all possible transformer models see sentence-transf
 To diversify the results, we take the 2 x top_n most similar words/phrases to the document. Then, we take all top_n combinations from the 2 x top_n words and extract the combination that are the least similar to each other by cosine similarity.
 
 
-```kw_model.extract_keywords(doc, keyphrase_ngram_range=(3, 3), stop_words='english', 
+```
+kw_model.extract_keywords(doc, keyphrase_ngram_range=(3, 3), stop_words='english', 
     use_maxsum=True, nr_candidates=20, top_n=5)
 [('set training examples', 0.7504),
  ('generalize training data', 0.7727),
@@ -66,8 +69,8 @@ To diversify the results, we take the 2 x top_n most similar words/phrases to th
 ## Maximal Marginal Relevance¶
 
 To diversify the results, we can use Maximal Margin Relevance (MMR) to create keywords / keyphrases which is also based on cosine similarity. The results with high diversity:
-
-```kw_model.extract_keywords(doc, keyphrase_ngram_range=(3, 3), stop_words='english', 
+```
+kw_model.extract_keywords(doc, keyphrase_ngram_range=(3, 3), stop_words='english', 
     use_mmr=True, diversity=0.7)
 [('algorithm generalize training', 0.7727),
  ('labels unseen instances', 0.1649),
