@@ -55,20 +55,20 @@ To diversify the results, we take the 2 x top_n most similar words/phrases to th
 
 
 ```kw_model.extract_keywords(doc, keyphrase_ngram_range=(3, 3), stop_words='english', 
-                              use_maxsum=True, nr_candidates=20, top_n=5)
+    use_maxsum=True, nr_candidates=20, top_n=5)
 [('set training examples', 0.7504),
  ('generalize training data', 0.7727),
  ('requires learning algorithm', 0.5050),
  ('supervised learning algorithm', 0.3779),
  ('learning machine learning', 0.2891)]
- ```
+```
  
 ## Maximal Marginal Relevance¶
 
 To diversify the results, we can use Maximal Margin Relevance (MMR) to create keywords / keyphrases which is also based on cosine similarity. The results with high diversity:
 
 ```kw_model.extract_keywords(doc, keyphrase_ngram_range=(3, 3), stop_words='english', 
-                              use_mmr=True, diversity=0.7)
+    use_mmr=True, diversity=0.7)
 [('algorithm generalize training', 0.7727),
  ('labels unseen instances', 0.1649),
  ('new examples optimal', 0.4185),
