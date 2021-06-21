@@ -1,4 +1,4 @@
 streamlit==0.82.0
 pandas==1.2.4
+flair==0.7
 keybert==0.3.0
-keybert[flair]
