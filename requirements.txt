@@ -1,3 +1,5 @@
-streamlit==0.82.0
 pandas==1.2.4
-keybert[flair]
+sentence_transformers==1.2.0
+flair==0.7
+streamlit==0.82.0
+keybert==0.3.0
