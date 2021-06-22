@@ -6,3 +6,5 @@ sentence-transformers==1.2.0
 sentencepiece==0.1.91
 flair==0.7
 keybert==0.3.0
+urllib3==1.26.5
+gensim==3.8.3
