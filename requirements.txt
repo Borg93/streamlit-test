@@ -1,5 +1,6 @@
 pandas==1.2.4
 torch==1.4.0
+transformers==4.3.2
 flair==0.7
 streamlit==0.82.0
 keybert==0.3.0
