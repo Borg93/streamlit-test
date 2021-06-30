@@ -14,7 +14,7 @@ st.title("Atkins Keyword extractor")
 
 add_selectbox = st.sidebar.selectbox(
     "Choice model:",
-    ("xlm-r-bert-base-nli-stsb-mean-tokens", "Gabriel/Model_Atkins", "paraphrase-multilingual-mpnet-base-v2", "Contrastive-Tension/BERT-Base-Swe-CT-STSb")
+    ("paraphrase-multilingual-mpnet-base-v2", "Gabriel/Model_Atkins", "Contrastive-Tension/BERT-Base-Swe-CT-STSb")
 )
 
 @st.cache(allow_output_mutation=True, suppress_st_warning=True, show_spinner=True)
@@ -33,7 +33,7 @@ def load_model():
 
     return model
 
-check = st.checkbox('Run model', value=False)
+check = st.checkbox('Run model', value=True)
 st.write('State of model:', check)
 if check:
     model = load_model()
